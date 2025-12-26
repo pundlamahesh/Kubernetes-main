@@ -26,7 +26,10 @@ spec:
             - name: MYSQL_PASSWORD
               value: mypassword
             - name: MYSQL_DATABASE
-              value: mydatabase
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-config
+                  key: MYSQL_DATABASE
           volumeMounts:
             - name: mysql-data
               mountPath: /var/lib/mysql
