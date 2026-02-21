@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.7.9
+        image: mahesh1608/html-app:latest
         ports:
         - containerPort: 80
         resources:
