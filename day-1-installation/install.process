@@ -45,9 +45,12 @@ You can follow same procedure in the official  AWS document [Getting started wit
    --zones <AZ-1>,<AZ-2>
    
    example:
-   eksctl create cluster --name naresh \
-      --region us-east-1 \
-   --node-type t2.small \
+   eksctl create cluster --name SwiftPDF \
+    --region us-east-1 \
+   --node-type t2.medium \
+   --nodes-min 2 \
+   --nodes-max 2 \ 
+   --zones <AZ-1>,<AZ-2>
 
 
 5. To delete the EKS clsuter 
